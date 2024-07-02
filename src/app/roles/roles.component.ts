@@ -41,7 +41,7 @@ import { RoleTeen1, RoleTeen2 } from '../models/role-teen';
   templateUrl: './roles.component.html',
   styleUrls: ['./roles.component.css']
 })
-export class RolesComponent implements OnInit {
+export class RolesComponent implements OnInit {      //clase q tiene varias propiedades q representa un rol
   roleDealer1: RoleDealer1 | undefined;
   roleDealer2: RoleDealer2 | undefined;
   roleDoctor1: RoleDoctor1 | undefined;
@@ -57,7 +57,7 @@ export class RolesComponent implements OnInit {
   roleTeen1: RoleTeen1 | undefined;
   roleTeen2: RoleTeen2 | undefined;
 
-  currentStoryPartDealer1: string | null = null;
+  currentStoryPartDealer1: string | null = null;     //propiedAD QUE ALMACENA LA story
   currentStoryPartDealer2: string | null = null;
   currentStoryPartDoctor1: string | null = null;
   currentStoryPartDoctor2: string | null = null;
@@ -73,7 +73,7 @@ export class RolesComponent implements OnInit {
   currentStoryPartTeen2: string | null = null;
 
   constructor(
-    private roleDealer1Service: RoleDealer1Service,
+    private roleDealer1Service: RoleDealer1Service,  // inyecta instancias de services
     private roleDealer2Service: RoleDealer2Service,
     private roleDoctor1Service: RoleDoctor1Service,
     private roleDoctor2Service: RoleDoctor2Service,
@@ -91,8 +91,8 @@ export class RolesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.roleDealer1 = this.roleDealer1Service.getRoleDealer1();
-    this.roleDealer2 = this.roleDealer2Service.getRoleDealer2();
+    this.roleDealer1 = this.roleDealer1Service.getRoleDealer1();    //este componente inicisliza cada propiedad
+    this.roleDealer2 = this.roleDealer2Service.getRoleDealer2();     //cada propiedad del rol llamando al metodo get
     this.roleDoctor1 = this.roleDoctor1Service.getRoleDoctor1();
     this.roleDoctor2 = this.roleDoctor2Service.getRoleDoctor2();
     this.roleFriend1 = this.roleFriend1Service.getRoleFriend1();

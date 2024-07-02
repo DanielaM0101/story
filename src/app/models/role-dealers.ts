@@ -1,5 +1,5 @@
-// RoleDealer1 class
-export class RoleDealer1  {
+
+export class RoleDealer1  {      // clase la matriz  parts
     private storyIndex: number = 0;
     private storyParts: string[] = [
       " Los Dealers son fundamentales en las ventas de la ciudad.",
@@ -7,8 +7,8 @@ export class RoleDealer1  {
       " Realizan actividades ilegales como: Venta de drogas, Contrabando."
     ];
   
-    constructor(
-      public name: string = 'Pepe',
+    constructor(                           // que tiene tres parametros estos inicializn las 
+      public name: string = 'Pepe',        // las propiedades de la clase estas tienen 4 metodos
       public description: string = '',
       public illegalActivities: string[] = ['Venta de drogas', 'Contrabando']
     ) {}
@@ -41,7 +41,7 @@ export class RoleDealer1  {
       }
     }
   
-    resetStoryIndex(): void {
+    resetStoryIndex(): void {                    //metodo  que vuelve a iniciar story parts
       this.storyIndex = 0;
     }
   }
